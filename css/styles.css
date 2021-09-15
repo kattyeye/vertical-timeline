@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #264653;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+p {
+  font-family: "lato";
+  color: #fff;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  box-shadow: 5px #2a9d8f;
+}
+
+/*# sourceMappingURL=styles.css.map */

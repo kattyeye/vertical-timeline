@@ -1,0 +1,47 @@
+$bg-color: #264653;
+$--accent-1: #e76f51;
+$--accent-2: #f4a261;
+$--accent-3: #2a9d8f;
+$-title-font: "Roboto", sans-serif;
+$-p-font: "lato";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #264653;
+}
+
+h2 {
+  font-family: $-title-font;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+}
+p {
+  font-family: $-p-font;
+  color: #fff;
+}
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  box-shadow: 5px $--accent-3;
+}
