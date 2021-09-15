@@ -2,7 +2,7 @@ $bg-color: #264653;
 $--accent-1: #e76f51;
 $--accent-2: #f4a261;
 $--accent-3: #2a9d8f;
-$-title-font: "Roboto", sans-serif;
+$-title-font: "Roboto", sans-serif, bold;
 $-p-font: "lato";
 
 * {
@@ -52,36 +52,21 @@ img {
   position: relative;
   width: 50%;
 }
-
+//circle with pencil inside
 .container::after {
-  content: "";
+  font-family: "FontAwesome";
+  content: "\f303"; //pencil icon
   position: absolute;
   width: 25px;
   height: 25px;
-  right: -18px;
+  right: -16px;
   background-color: $--accent-1;
-  top: 30px;
+  color: $--accent-3;
+  top: 26px;
   border-radius: 50%;
   z-index: 1;
-}
-
-#time-left {
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  font-family: $-p-font;
-  color: #fff;
-  background-color: $--accent-2;
-  padding: 20px;
-}
-#time-right {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  font-family: $-p-font;
-  color: #fff;
-  background-color: $--accent-2;
-  padding: 20px;
+  padding-left: 7px;
+  padding-top: 5px;
 }
 
 .left {
@@ -95,9 +80,8 @@ img {
   content: " ";
   height: 0;
   position: absolute;
-  top: 30px;
+  top: 28px;
   width: 0;
-  z-index: 1;
   right: 30px;
   border: medium solid $--accent-1;
   border-width: 10px 0 10px 10px;
@@ -109,9 +93,8 @@ img {
   content: " ";
   height: 0;
   position: absolute;
-  top: 30px;
+  top: 28px;
   width: 0;
-  z-index: 1;
   left: 30px;
   border: medium solid $--accent-1;
   border-width: 10px 10px 10px 0;
@@ -120,7 +103,7 @@ img {
 
 //Fix the circle for containers on the right side
 .right::after {
-  left: -16px;
+  left: -12px;
 }
 
 // the actual content inside the content box
@@ -130,8 +113,42 @@ img {
   position: relative;
   border-radius: 6px;
 }
+//date boxes
+#time-left {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  font-family: $-title-font;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: $--accent-2;
+  padding: 10px;
+  border-radius: 0px 5px 0px 0px;
+}
+#time-right {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  font-family: $-title-font;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: $--accent-2;
+  padding: 10px;
+  border-radius: 5px 0px 0px 0px;
+}
 //  for the boxes with images so that the image stays stretched to the edges
-.content > img {
+img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 50%;
+  border-radius: 5px 5px 0px 0px;
+}
+
+#under-pic {
+  position: relative;
 }
 
 button {
@@ -139,11 +156,20 @@ button {
     border-box;
   border-radius: 50em;
   border: 4px solid transparent;
-  padding: 15px 40px 15px 40px;
+  padding: 10px 25px 10px 25px;
   color: #fff;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
+  margin-top: 10px;
+}
+button:hover {
+  background: linear-gradient(to right, $--accent-3, $--accent-2) border-box;
+}
+
+#left-border-p {
+  border-left: 4px solid $--accent-3;
+  padding-left: 10px;
 }
 
 // Media queries - Responsive timeline on screens less than 600px wide
