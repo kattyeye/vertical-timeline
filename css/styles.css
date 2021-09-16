@@ -43,12 +43,12 @@ p {
 
 .container::after {
   font-family: "FontAwesome";
-  content: "\f303";
+  content: "\f1a8";
   position: absolute;
   width: 25px;
   height: 25px;
   right: -16px;
-  background-color: #e76f51;
+  background-color: #f0d37a;
   color: #2a9d8f;
   top: 26px;
   border-radius: 50%;
